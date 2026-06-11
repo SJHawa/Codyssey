@@ -120,17 +120,6 @@ def read_weather_rows(csv_path):
     return rows
 
 
-def preview_weather_rows(rows, limit=5):
-    '''Print the first few CSV rows for verification.'''
-    # INSERT 전에 데이터가 정상적으로 읽혔는지 눈으로 확인한다.
-    print('CSV 데이터 상위 5개를 확인합니다.')
-
-    for row in rows[:limit]:
-        print(row)
-
-    print(f'총 CSV 데이터 개수: {len(rows)}')
-
-
 def convert_row(raw_row):
     '''Validate and convert one CSV row for insertion.'''
     mars_date_text = raw_row['mars_date'].strip()
